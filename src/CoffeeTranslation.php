@@ -21,7 +21,7 @@ final class CoffeeTranslation extends LanguageApi
     /**
      * Denotes the current version of the framework.
      */
-    private const VERSION = "0.1";
+    private const VERSION = "1.0";
 
     /**
      * Stores whether or not the runtime environment supports the multibyte
