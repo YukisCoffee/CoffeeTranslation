@@ -89,4 +89,16 @@ class LanguageRecord implements IResourceRecord
         $out = null;
         return false;
     }
+    
+    /**
+     * Restore data from a var_dump() result.
+     */
+    public static function __set_state(array $state): object
+    {
+        $pThis = (new \ReflectionClass(self::class))->newInstanceWithoutConstructor();
+        
+        $pThis->entries = $state["entries"];
+        
+        return $pThis;
+    }
 }
